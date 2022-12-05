@@ -1,0 +1,8 @@
+Flask==2.2.2
+pytest==7.2.0
+flask-sqlalchemy==3.0.2
+connexion[swagger-ui]==2.14.1
+pydantic==1.10.2
+python-dotenv==0.21.0
+psycopg2-binary==2.9.5
+Flask-Migrate==4.0.0
