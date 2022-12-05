@@ -5,6 +5,9 @@ Flask Backend API for Radio School
 https://www.digitalocean.com/community/tutorials/how-to-structure-a-large-flask-application-with-flask-blueprints-and-flask-sqlalchemy
 https://abstractkitchen.com/blog/flask-backbone/
 
+# Create New Virtual Environment
+- pipenv install
+
 # Launch PIPENV
 pipenv shell
 
