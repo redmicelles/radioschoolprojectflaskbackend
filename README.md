@@ -16,10 +16,10 @@ pipenv install -r requirements.txt
 
 # Flask Migrate
 - Initialise Migration Scripts
-  flask --app run db init
+  flask --app lask_app db init
 - Migrate DB Changes
-  flask --app run db migrate
+  flask --app lask_app db migrate
 - DB Pre-Upgrade Script (optional)
-  flask --app run db stamp head
+  flask --app lask_app db stamp head
 - Upgrade Db
-  flask --app run db upgrade
+  flask --app lask_app db upgrade
