@@ -1,5 +1,5 @@
-from flask_app import db
-from sqlalchemy.dialects.postgresql import JSON
+from app.db import db
+from sqlalchemy.dialects.mysql import JSON
 
 class Result(db.Model):
     __tablename__ = 'results'
@@ -7,7 +7,7 @@ class Result(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     url = db.Column(db.String())
     result_all = db.Column(JSON)
-    result_no_stop_words = db.Column(JSON)
+    # result_no_stop_words = db.Column(JSON)
 
     def __init__(self, url, result_all, result_no_stop_words):
         self.url = url
