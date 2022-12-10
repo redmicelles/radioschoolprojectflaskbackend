@@ -22,13 +22,17 @@ pipenv install -r requirements.txt
 
 # Flask Migrate
 - Initialise Migration Scripts
-  flask --app flask_app db init
+  flask --app app_config db init
 - Migrate DB Changes
-  flask --app flask_app db migrate
+  flask --app app_config db migrate
 - DB Pre-Upgrade Script (optional)
-  flask --app flask_app db stamp head
+  flask --app app_config db stamp head
 - Upgrade Db
-  flask --app flask_app db upgrade
+  flask --app app_config db upgrade
+
+# Working Directly with Alembic
+- Create Environment
+  alembic init alembic
 
 # Docker Compose
 - MSQL Service is preferred

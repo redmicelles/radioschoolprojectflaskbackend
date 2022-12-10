@@ -1,21 +1,8 @@
-from app import create_app
+import app_config
 from config import Config
-from os import environ
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-from app.models import sample_model
-from app.db import db
 
-app = create_app()
-
-application = app.app
-application.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:Password123&!@172.23.0.1:3308/radioschool"
-application.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-db = SQLAlchemy(application)
-migrate = Migrate(application, db)
-
-# db.init_app(application)
-# migrate.init_app(application, db)
+app = app_config.connex_app
+app.add_api(app_config.basedir / "swagger.yaml")
 
 @app.route("/")
 def health_check():
