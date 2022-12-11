@@ -1,4 +1,4 @@
-from sqlalchemy.dialects.mysql import JSON
+# from sqlalchemy.dialects.mysql import JSON
 from app_config import db
 
 class AccessCode(db.Model):
@@ -11,4 +11,4 @@ class AccessCode(db.Model):
         self.access_code = access_code
 
     def __repr__(self):
-        return '<id {}>'.format(self.id)
+        return '<access code {}>'.format(self.access_code)

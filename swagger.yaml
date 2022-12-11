@@ -18,7 +18,7 @@ paths:
     get:
       operationId: "backend_app.public_web.access_code_apis.generate_access_code"
       tags:
-        - "People"
+        - "Access Code"
       summary: "Generate access for accessing the Radio School public web"
       responses:
         "200":
@@ -31,6 +31,25 @@ paths:
                   access_code:
                     type: string
                     example: 1ERY09
+
+
+  /fetch-access-code:
+      get:
+        operationId: "backend_app.public_web.access_code_apis.get_all_access_token"
+        tags:
+          - "Access Code"
+        summary: Fetches all access codes from the Radio School database"
+        responses:
+          "200":
+            description: "Access Code"
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    access_code:
+                      type: string
+                      example: 1ERY09
 
 components:
   schemas:
