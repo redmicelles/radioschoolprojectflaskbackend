@@ -37,3 +37,6 @@ pipenv install -r requirements.txt
 # Docker Compose
 - MSQL Service is preferred
 - Postgre and PG-Admin are disabled but may be enable and environment variables set to meet requirements
+
+# Running the app
+- python flask_app.py
