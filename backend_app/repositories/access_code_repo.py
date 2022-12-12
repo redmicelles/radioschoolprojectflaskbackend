@@ -5,12 +5,13 @@ from typing import List
 
 
 class AccessCodeRepo:
-    
-    def create(self,access_code):
+
+
+    def create(access_code):
         db.session.add(access_code)
         db.session.commit()
         
-    def fetchById(self,_id)-> 'AccessCode':
+    def fetchById(_id:int)-> 'AccessCode':
         return db.session.query(AccessCode).filter_by(id=_id).first()
     
     def fetchAll(self) -> List['AccessCode']:
@@ -23,4 +24,4 @@ class AccessCodeRepo:
         
     def update(self,access_code_data):
         db.session.merge(access_code_data)
-        db.session.commit()
+        db.session.commit() 

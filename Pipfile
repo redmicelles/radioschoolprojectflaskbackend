@@ -15,6 +15,7 @@ mysqlclient = "==2.1.1"
 connexion = {version = "==2.14.1", extras = ["swagger-ui"]}
 flask-marshmallow = "*"
 marshmallow-sqlalchemy = "*"
+pyjwt = "*"
 
 [dev-packages]
 

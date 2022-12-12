@@ -11,4 +11,4 @@ class AccessCode(db.Model):
         self.access_code = access_code
 
     def __repr__(self):
-        return '<access code {}>'.format(self.access_code)
+        return '<id {}>'.format(self.id)

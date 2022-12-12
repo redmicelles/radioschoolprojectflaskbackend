@@ -51,22 +51,46 @@ paths:
                       type: string
                       example: 1ERY09
 
-components:
-  schemas:
-    Person:
-      type: "object"
-      required:
-        - lname
-      properties:
-        fname:
-          type: "string"
-        lname:
-          type: "string"
-  parameters:
-    lname:
-      name: "lname"
-      description: "Last name of the person to get"
-      in: path
-      required: True
-      schema:
-        type: "string"
+
+  /generate_jwt_access_token:
+    post:
+        operationId: "backend_app.public_web.access_code_apis.grant_access_token"
+        tags:
+          - Access Token
+        summary: Create a jwt token for users who supplied a correct access_code
+        description: Create a jwt token for users who supplied a correct access_code
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - access_code
+                properties:
+                  access_code:
+                    type: "string"
+        responses:
+          "201":
+            description: Access Created successfully
+
+
+
+# components:
+#   schemas:
+#     Person:
+#       type: "object"
+#       required:
+#         - lname
+#       properties:
+#         fname:
+#           type: "string"
+#         lname:
+#           type: "string"
+#   parameters:
+#     lname:
+#       name: "lname"
+#       description: "Last name of the person to get"
+#       in: path
+#       required: True
+#       schema:
+#         type: "string"
