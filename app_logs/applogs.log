@@ -1,3 +1,18 @@
 2022-12-11 15:53:21,676 : ERROR : app_config : App failed while saving access code - IS9QAT to the database
 2022-12-11 15:53:21,676 : ERROR : app_config : (MySQLdb.OperationalError) (2003, "Can't connect to MySQL server on '172.23.0.1:3308' (111)")
 (Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-12-12 15:44:55,866 : ERROR : app_config : App failed while saving access code - 6DTON7 to the database
+2022-12-12 15:44:55,866 : ERROR : app_config : (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '172.23.0.1' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-12-12 15:45:50,086 : ERROR : app_config : App failed while saving access code - 3GGIM7 to the database
+2022-12-12 15:45:50,086 : ERROR : app_config : (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '172.23.0.1' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-12-12 15:47:02,010 : ERROR : app_config : App failed while saving access code - R4R07G to the database
+2022-12-12 15:47:02,010 : ERROR : app_config : (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '172.23.0.1' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-12-12 15:47:03,646 : ERROR : app_config : App failed while saving access code - TSVAFH to the database
+2022-12-12 15:47:03,647 : ERROR : app_config : (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '172.23.0.1' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-12-12 16:01:27,715 : ERROR : app_config : App failed while saving access code - FIGLOP to the database
+2022-12-12 16:01:27,715 : ERROR : app_config : (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '172.23.0.1' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)

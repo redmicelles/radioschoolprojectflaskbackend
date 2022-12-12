@@ -6,7 +6,7 @@ from flask_migrate import Migrate
 from log_config import file_handler
 from config import BASE_DIR
 from flask_cors import CORS
-from MySQLdb import OperationalError
+# from MySQLdb import OperationalError
 
 connex_app = connexion.App(__name__, specification_dir=BASE_DIR)
 app = connex_app.app
@@ -18,7 +18,7 @@ cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 app.logger.addHandler(file_handler)
 
 #add SQLAlchemy configuration
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:Password123&!@172.23.0.1:3308/radioschool"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:Password123&!@172.23.0.1:3308/radioschool"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)

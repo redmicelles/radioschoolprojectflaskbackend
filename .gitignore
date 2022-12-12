@@ -1,5 +1,6 @@
 **/__pycache__
 .env
-playground.py
-.pem
-/jwt_keys
+./playground.py
+./backend_requirements.txt
+**.pem
+/jwt_credentials
