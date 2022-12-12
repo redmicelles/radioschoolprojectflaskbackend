@@ -17,7 +17,11 @@ acessCodeListSchema = AccessCodeSchema(many=True)
 ITEM_NOT_FOUND = "Item not found for id: {}"
 
 
-def get_all_access_token():
+from deco import token_required
+
+@token_required
+def get_all_access_token(current_user):
+    print(current_user)
     return acessCodeListSchema.dump(accessCodeRepo.fetchAll()), 200
     
 def generate_access_code():
