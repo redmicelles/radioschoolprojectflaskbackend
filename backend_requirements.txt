@@ -1,0 +1,7 @@
+CMS Authentication
+Add user(Email, email), send invite and create password
+List User
+Delete User
+Forgot Password, Reset password token
+
+Dashboards

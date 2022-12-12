@@ -18,8 +18,8 @@ paths:
     get:
       operationId: "backend_app.public_web.access_code_apis.generate_access_code"
       tags:
-        - "People"
-      summary: "Generate access for accessing the Radio School public web"
+        - "Public Web"
+      summary: "Generate access code for the Radio School public web"
       responses:
         "200":
           description: "Access Code"
@@ -32,17 +32,66 @@ paths:
                     type: string
                     example: 1ERY09
 
+  /generate-tokens:
+    post:
+      operationId: "backend_app.public_web.access_code_apis.generate_tokens"
+      tags:
+        - "Public Web"
+      summary: "Generate access and refresh tokens for accessing the Radio School public web"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                access_code:
+                  type: string
+                  minimum: 6
+                  maximum: 6
+                  example: 1ERY09
+      responses:
+        "200":
+          description: "Access and Refresh Tokens"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  data:
+                    type: object
+                    properties:
+                      access_token:
+                        type: string
+                        example: eyJ0eXAiOiJKV1QiLCJhbGciOi....akqrpzekGCE2uVtmVpGAU3hquxs3zJCYg27JHKY6EcDhRw
+                      refresh_token:
+                        type: string
+                        example:  eyJ0eXAiOiJKV1QiLCJhbGciOi....akqrpzekGCE2uVtmVpGAU3hquxs3zJCYg27JHKY6EcDhRw
+        "422":
+          description: "Failed request body validation"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Errors'
+                
 components:
   schemas:
-    Person:
-      type: "object"
-      required:
-        - lname
+    Errors:
+      type: object
       properties:
-        fname:
-          type: "string"
-        lname:
-          type: "string"
+        status:
+          type: string
+          example: success
+        code:
+          type: integer
+          example: 20
+        message:
+          type: string
+          example: Access code input validation failed
+
   parameters:
     lname:
       name: "lname"

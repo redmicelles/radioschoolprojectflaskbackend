@@ -37,3 +37,20 @@ pipenv install -r requirements.txt
 # Docker Compose
 - MSQL Service is preferred
 - Postgre and PG-Admin are disabled but may be enable and environment variables set to meet requirements
+
+# JWT RS256 Keys
+Access tokens are signed using RS256 private keys and are decoded using the public keys. These keys can be generated using OpenSSL by following the steps below
+- generate a private key with the correct length
+openssl genrsa -out private-key.pem 3072
+
+- generate corresponding public key
+openssl rsa -in private-key.pem -pubout -out public-key.pem
+
+- optional: create a self-signed certificate
+openssl req -new -x509 -key private-key.pem -out cert.pem -days 360
+
+- optional: convert pem to pfx
+openssl pkcs12 -export -inkey private-key.pem -in cert.pem -out cert.pfx
+
+source1: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm
+source2: https://www.scottbrady91.com/openssl/creating-rsa-keys-using-openssl

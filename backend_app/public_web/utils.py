@@ -7,7 +7,7 @@ class CodeGenerator():
     def __init__(self) -> None:
         self.code = ""
 
-    def generate (self, code_len) -> str:
+    def generate (self, code_len: int) -> str:
 
         """code generator method"""
         character_collection = [*ascii_uppercase, *digits]

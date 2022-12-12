@@ -1,11 +1,12 @@
 import app_config
-from config import Config
+from config import Config, BASE_DIR
+from os import path
 
 app = app_config.connex_app
-app.add_api(app_config.basedir / "swagger.yaml")
+app.add_api(path.join(BASE_DIR, "swagger.yaml"))
 
 @app.route("/")
-def health_check():
+def health_check() -> str:
     return "App Server is running and alive!"
 
 if __name__ == "__main__":

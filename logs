@@ -1,0 +1,2 @@
+2022-12-10 15:23:19,488 : ERROR : app_config : App failed while saving access code - 98OM4E to the database
+2022-12-10 15:23:19,488 : ERROR : app_config : Uncaught DB exception
