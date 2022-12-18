@@ -30,7 +30,7 @@ pipenv install -r requirements.txt
 - Upgrade Db
   flask --app app_config db upgrade
 
-# Working Directly with Alembic
+# Working Directly with Alembic?
 - Create Environment
   alembic init alembic
 
@@ -54,3 +54,7 @@ openssl pkcs12 -export -inkey private-key.pem -in cert.pem -out cert.pfx
 
 source1: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm
 source2: https://www.scottbrady91.com/openssl/creating-rsa-keys-using-openssl
+
+# Black for Code fromatting
+https://pypi.org/project/black/
+- to format codebase run `black .` from the root

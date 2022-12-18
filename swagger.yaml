@@ -76,6 +76,92 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Errors'
+
+  /verify-token:
+    post:
+      operationId: "backend_app.public_web.access_code_apis.verify_token"
+      tags:
+        - "Public Web"
+      summary: "Token Verification"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+                  example: eyJ0eXAiOiJKV1QiLCJhbGciOi....akqrpzekGCE2uVtmVpGAU3hquxs3zJCYg27JHKY6EcDhRw
+      responses:
+        "200":
+          description: "Token Verification"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  data:
+                    type: object
+                    properties:
+                      token_isvalid:
+                        type: boolean
+                        example: true
+        "422":
+          description: "Failed request body validation"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Errors'
+
+  /refresh-token:
+    post:
+      operationId: "backend_app.public_web.access_code_apis.refresh_token"
+      tags:
+        - "Public Web"
+      summary: "Refresh all Tokens"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                access_token:
+                  type: string
+                  example: eyJ0eXAiOiJKV1QiLCJhbGciOi....akqrpzekGCE2uVtmVpGAU3hquxs3zJCYg27JHKY6EcDhRw
+                refresh_token:
+                  type: string
+                  example: eyJ0eXAiOiJKV1QiLCJhbGciOi....akqrpzekGCE2uVtmVpGAU3hquxs3zJCYg27JHKY6EcDhRw
+      responses:
+        "200":
+          description: "Refreshed Tokens"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  data:
+                    type: object
+                    properties:
+                      access_token:
+                        type: string
+                        example: eyJ0eXAiOiJKV1QiLCJhbGciOi....akqrpzekGCE2uVtmVpGAU3hquxs3zJCYg27JHKY6EcDhRw
+                      refresh_token:
+                        type: string
+                        example: eyJ0eXAiOiJKV1QiLCJhbGciOi....akqrpzekGCE2uVtmVpGAU3hquxs3zJCYg27JHKY6EcDhRw
+        "422":
+          description: "Failed request body validation"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Errors'
                 
 components:
   schemas:
@@ -90,7 +176,7 @@ components:
           example: 20
         message:
           type: string
-          example: Access code input validation failed
+          example: Request body validation failed
 
   parameters:
     lname:

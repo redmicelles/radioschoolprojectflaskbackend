@@ -1,18 +1,39 @@
-2022-12-11 15:53:21,676 : ERROR : app_config : App failed while saving access code - IS9QAT to the database
-2022-12-11 15:53:21,676 : ERROR : app_config : (MySQLdb.OperationalError) (2003, "Can't connect to MySQL server on '172.23.0.1:3308' (111)")
-(Background on this error at: https://sqlalche.me/e/14/e3q8)
-2022-12-12 15:44:55,866 : ERROR : app_config : App failed while saving access code - 6DTON7 to the database
-2022-12-12 15:44:55,866 : ERROR : app_config : (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '172.23.0.1' ([Errno 111] Connection refused)")
-(Background on this error at: https://sqlalche.me/e/14/e3q8)
-2022-12-12 15:45:50,086 : ERROR : app_config : App failed while saving access code - 3GGIM7 to the database
-2022-12-12 15:45:50,086 : ERROR : app_config : (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '172.23.0.1' ([Errno 111] Connection refused)")
-(Background on this error at: https://sqlalche.me/e/14/e3q8)
-2022-12-12 15:47:02,010 : ERROR : app_config : App failed while saving access code - R4R07G to the database
-2022-12-12 15:47:02,010 : ERROR : app_config : (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '172.23.0.1' ([Errno 111] Connection refused)")
-(Background on this error at: https://sqlalche.me/e/14/e3q8)
-2022-12-12 15:47:03,646 : ERROR : app_config : App failed while saving access code - TSVAFH to the database
-2022-12-12 15:47:03,647 : ERROR : app_config : (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '172.23.0.1' ([Errno 111] Connection refused)")
-(Background on this error at: https://sqlalche.me/e/14/e3q8)
-2022-12-12 16:01:27,715 : ERROR : app_config : App failed while saving access code - FIGLOP to the database
-2022-12-12 16:01:27,715 : ERROR : app_config : (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '172.23.0.1' ([Errno 111] Connection refused)")
-(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-12-16 16:19:09,186 : ERROR : app_config : Invalid header string: Expecting value: line 1 column 20 (char 19)
+2022-12-16 16:20:23,736 : ERROR : app_config : Invalid header string: Expecting value: line 1 column 20 (char 19)
+2022-12-16 16:48:30,272 : ERROR : app_config : '_RSAPrivateKey' object has no attribute 'verify'
+2022-12-17 14:33:46,686 : ERROR : app_config : __call__() missing 2 required positional arguments: 'environ' and 'start_response'
+2022-12-17 14:37:33,976 : ERROR : app_config : unhashable type: 'dict'
+2022-12-17 15:08:08,040 : ERROR : app_config : Invalid audience
+2022-12-17 15:27:54,349 : ERROR : app_config : 1 validation error for TokenVerificationModel
+token
+  none is not an allowed value (type=type_error.none.not_allowed)
+2022-12-17 15:30:06,128 : ERROR : app_config : 'str' object does not support item assignment
+2022-12-17 15:41:09,645 : ERROR : app_config : sign_token() missing 1 required positional argument: 'token_type'
+2022-12-17 15:42:17,104 : ERROR : app_config : prepare_token_payload() missing 1 required positional argument: 'token_type'
+2022-12-17 15:43:05,626 : ERROR : app_config : sign_token() missing 1 required positional argument: 'token_type'
+2022-12-17 15:45:10,093 : ERROR : app_config : 'str' object does not support item assignment
+2022-12-17 15:46:00,880 : ERROR : app_config : 'str' object does not support item assignment
+2022-12-17 15:50:19,173 : ERROR : app_config : <module 'traceback' from '/home/dexter/anaconda3/lib/python3.9/traceback.py'>
+2022-12-17 15:52:11,683 : ERROR : app_config : 'str' object does not support item assignment
+2022-12-18 15:49:31,972 : ERROR : app_config : string argument without an encoding
+2022-12-18 18:16:15,804 : ERROR : app_config : Some Error
+2022-12-18 18:16:15,805 : ERROR : app_config : Some Error
+2022-12-18 18:17:03,101 : ERROR : app_config : __init__() takes 1 positional argument but 2 were given
+2022-12-18 18:17:03,102 : ERROR : app_config : __init__() takes 1 positional argument but 2 were given
+2022-12-18 18:20:08,493 : ERROR : app_config : __init__() takes 1 positional argument but 2 were given
+2022-12-18 18:22:15,244 : ERROR : app_config : __init__() takes 1 positional argument but 2 were given
+2022-12-18 18:29:28,664 : ERROR : app_config : __init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/home/dexter/.local/share/virtualenvs/radioschoolprojectflaskbackend-lfj6WdFT/lib/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dexter/.local/share/virtualenvs/radioschoolprojectflaskbackend-lfj6WdFT/lib/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dexter/.local/share/virtualenvs/radioschoolprojectflaskbackend-lfj6WdFT/lib/python3.9/site-packages/connexion/decorators/decorator.py", line 68, in wrapper
+    response = function(request)
+  File "/home/dexter/.local/share/virtualenvs/radioschoolprojectflaskbackend-lfj6WdFT/lib/python3.9/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper
+    response = function(request)
+  File "/home/dexter/.local/share/virtualenvs/radioschoolprojectflaskbackend-lfj6WdFT/lib/python3.9/site-packages/connexion/decorators/parameter.py", line 120, in wrapper
+    return function(**kwargs)
+  File "/home/dexter/Documents/radioschool/radioschoolprojectflaskbackend/backend_app/public_web/access_code_apis.py", line 20, in generate_access_code
+    code_generator = CodeGenerator("skksskk")
+TypeError: __init__() takes 1 positional argument but 2 were given

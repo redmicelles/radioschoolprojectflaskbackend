@@ -1,11 +1,8 @@
 import os
-from dotenv import load_dotenv
 
-#load environment variables
-load_dotenv()
-
-#Set App's Base Directory
+# Set App's Base Directory
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+
 
 class Config:
     APP_HOST = os.getenv("APP_HOST") or "0.0.0.0"
@@ -24,3 +21,4 @@ class Config:
     JWT_AUDIENCE = os.getenv("JWT_AUDIENCE")
     JWT_TTL = int(os.getenv("JWT_TTL"))
     JWT_ISSUER = os.getenv("JWT_ISSUER")
+    DATABASE_URI = os.getenv("DATABASE_URI")
